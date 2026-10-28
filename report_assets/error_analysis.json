@@ -1,0 +1,518 @@
+{
+  "summary": {
+    "total_test": 3080,
+    "correct": 2696,
+    "incorrect": 384,
+    "accuracy": 0.8753,
+    "avg_conf_correct": 0.9079,
+    "avg_conf_wrong": 0.5578,
+    "duplicate_train_test_overlap": 6,
+    "within_train_duplicates": 8,
+    "within_test_duplicates": 2
+  },
+  "top_confused_pairs": [
+    {
+      "true": "card_acceptance",
+      "predicted_as": "card_not_working",
+      "count": 6
+    },
+    {
+      "true": "why_verify_identity",
+      "predicted_as": "unable_to_verify_identity",
+      "count": 6
+    },
+    {
+      "true": "pending_transfer",
+      "predicted_as": "balance_not_updated_after_bank_transfer",
+      "count": 5
+    },
+    {
+      "true": "transfer_timing",
+      "predicted_as": "balance_not_updated_after_bank_transfer",
+      "count": 5
+    },
+    {
+      "true": "wrong_exchange_rate_for_cash_withdrawal",
+      "predicted_as": "card_payment_wrong_exchange_rate",
+      "count": 5
+    },
+    {
+      "true": "verify_my_identity",
+      "predicted_as": "unable_to_verify_identity",
+      "count": 5
+    },
+    {
+      "true": "fiat_currency_support",
+      "predicted_as": "exchange_via_app",
+      "count": 4
+    },
+    {
+      "true": "top_up_reverted",
+      "predicted_as": "top_up_failed",
+      "count": 4
+    },
+    {
+      "true": "why_verify_identity",
+      "predicted_as": "verify_my_identity",
+      "count": 4
+    },
+    {
+      "true": "unable_to_verify_identity",
+      "predicted_as": "verify_my_identity",
+      "count": 4
+    },
+    {
+      "true": "card_swallowed",
+      "predicted_as": "declined_cash_withdrawal",
+      "count": 4
+    },
+    {
+      "true": "failed_transfer",
+      "predicted_as": "beneficiary_not_allowed",
+      "count": 4
+    },
+    {
+      "true": "balance_not_updated_after_bank_transfer",
+      "predicted_as": "pending_transfer",
+      "count": 4
+    },
+    {
+      "true": "card_arrival",
+      "predicted_as": "card_delivery_estimate",
+      "count": 3
+    },
+    {
+      "true": "pin_blocked",
+      "predicted_as": "get_physical_card",
+      "count": 3
+    },
+    {
+      "true": "contactless_not_working",
+      "predicted_as": "card_not_working",
+      "count": 3
+    },
+    {
+      "true": "top_up_by_bank_transfer_charge",
+      "predicted_as": "top_up_by_card_charge",
+      "count": 3
+    },
+    {
+      "true": "wrong_amount_of_cash_received",
+      "predicted_as": "declined_cash_withdrawal",
+      "count": 3
+    },
+    {
+      "true": "top_up_reverted",
+      "predicted_as": "pending_top_up",
+      "count": 3
+    },
+    {
+      "true": "card_payment_not_recognised",
+      "predicted_as": "extra_charge_on_statement",
+      "count": 3
+    }
+  ],
+  "worst_classes": {
+    "declined_transfer": {
+      "error_rate": 0.3,
+      "error_count": 12,
+      "total": 40,
+      "accuracy": 0.7
+    },
+    "failed_transfer": {
+      "error_rate": 0.275,
+      "error_count": 11,
+      "total": 40,
+      "accuracy": 0.725
+    },
+    "pending_transfer": {
+      "error_rate": 0.275,
+      "error_count": 11,
+      "total": 40,
+      "accuracy": 0.725
+    },
+    "top_up_failed": {
+      "error_rate": 0.25,
+      "error_count": 10,
+      "total": 40,
+      "accuracy": 0.75
+    },
+    "wrong_exchange_rate_for_cash_withdrawal": {
+      "error_rate": 0.25,
+      "error_count": 10,
+      "total": 40,
+      "accuracy": 0.75
+    },
+    "card_acceptance": {
+      "error_rate": 0.25,
+      "error_count": 10,
+      "total": 40,
+      "accuracy": 0.75
+    },
+    "why_verify_identity": {
+      "error_rate": 0.25,
+      "error_count": 10,
+      "total": 40,
+      "accuracy": 0.75
+    },
+    "balance_not_updated_after_bank_transfer": {
+      "error_rate": 0.225,
+      "error_count": 9,
+      "total": 40,
+      "accuracy": 0.775
+    },
+    "card_swallowed": {
+      "error_rate": 0.225,
+      "error_count": 9,
+      "total": 40,
+      "accuracy": 0.775
+    },
+    "card_payment_not_recognised": {
+      "error_rate": 0.225,
+      "error_count": 9,
+      "total": 40,
+      "accuracy": 0.775
+    },
+    "transfer_timing": {
+      "error_rate": 0.225,
+      "error_count": 9,
+      "total": 40,
+      "accuracy": 0.775
+    },
+    "topping_up_by_card": {
+      "error_rate": 0.225,
+      "error_count": 9,
+      "total": 40,
+      "accuracy": 0.775
+    },
+    "unable_to_verify_identity": {
+      "error_rate": 0.2,
+      "error_count": 8,
+      "total": 40,
+      "accuracy": 0.8
+    },
+    "top_up_reverted": {
+      "error_rate": 0.2,
+      "error_count": 8,
+      "total": 40,
+      "accuracy": 0.8
+    },
+    "beneficiary_not_allowed": {
+      "error_rate": 0.2,
+      "error_count": 8,
+      "total": 40,
+      "accuracy": 0.8
+    }
+  },
+  "perfect_classes": [
+    "terminate_account",
+    "apple_pay_or_google_pay",
+    "verify_source_of_funds",
+    "verify_top_up",
+    "edit_personal_details",
+    "age_limit",
+    "transaction_charged_twice"
+  ],
+  "sample_wrong_predictions": [
+    {
+      "text": "I was double charged, and the second charge is showing as \"pending\". How long will it be before I get my money back once the second charge has been refunded?",
+      "true": "pending_card_payment",
+      "predicted": "transaction_charged_twice",
+      "confidence": 0.9995
+    },
+    {
+      "text": "how many transactions can i make with a disposable card",
+      "true": "get_disposable_virtual_card",
+      "predicted": "disposable_card_limits",
+      "confidence": 0.9995
+    },
+    {
+      "text": "how long dies it take for transfers to reflect on my balance",
+      "true": "transfer_timing",
+      "predicted": "balance_not_updated_after_bank_transfer",
+      "confidence": 0.9929
+    },
+    {
+      "text": "What are the fees for top-ups?",
+      "true": "top_up_by_bank_transfer_charge",
+      "predicted": "top_up_by_card_charge",
+      "confidence": 0.9915
+    },
+    {
+      "text": "Will declined funds I tried to withdraw be returned to me?",
+      "true": "wrong_amount_of_cash_received",
+      "predicted": "declined_cash_withdrawal",
+      "confidence": 0.9823
+    },
+    {
+      "text": "Where do I find the exchange rate?",
+      "true": "exchange_charge",
+      "predicted": "exchange_rate",
+      "confidence": 0.9799
+    },
+    {
+      "text": "Am I able to exchange currencies?",
+      "true": "fiat_currency_support",
+      "predicted": "exchange_via_app",
+      "confidence": 0.9782
+    },
+    {
+      "text": "I wasn't charged the correct amount for an item I purchased, how can I fix this?",
+      "true": "request_refund",
+      "predicted": "card_payment_wrong_exchange_rate",
+      "confidence": 0.9764
+    },
+    {
+      "text": "How do I update the PIN on my account?",
+      "true": "change_pin",
+      "predicted": "get_physical_card",
+      "confidence": 0.9756
+    },
+    {
+      "text": "Can I exchange currencies?",
+      "true": "fiat_currency_support",
+      "predicted": "exchange_via_app",
+      "confidence": 0.9715
+    },
+    {
+      "text": "whats your exchange rate",
+      "true": "exchange_charge",
+      "predicted": "exchange_rate",
+      "confidence": 0.9632
+    },
+    {
+      "text": "My transfer is pending.",
+      "true": "balance_not_updated_after_bank_transfer",
+      "predicted": "pending_transfer",
+      "confidence": 0.9581
+    },
+    {
+      "text": "Someone stole my cards!",
+      "true": "lost_or_stolen_phone",
+      "predicted": "lost_or_stolen_card",
+      "confidence": 0.9525
+    },
+    {
+      "text": "It's been two weeks, why has the transaction for $1.00 not been reversed?",
+      "true": "extra_charge_on_statement",
+      "predicted": "reverted_card_payment?",
+      "confidence": 0.9454
+    },
+    {
+      "text": "The balance on my account wasn't updated after I made a depost.",
+      "true": "balance_not_updated_after_cheque_or_cash_deposit",
+      "predicted": "balance_not_updated_after_bank_transfer",
+      "confidence": 0.9445
+    },
+    {
+      "text": "What can I use a virtual disposable card for?",
+      "true": "disposable_card_limits",
+      "predicted": "get_disposable_virtual_card",
+      "confidence": 0.9442
+    },
+    {
+      "text": "I can't transfer money from my account.",
+      "true": "declined_transfer",
+      "predicted": "transfer_into_account",
+      "confidence": 0.9422
+    },
+    {
+      "text": "Why was I unable to do a transfer?",
+      "true": "declined_transfer",
+      "predicted": "failed_transfer",
+      "confidence": 0.9396
+    },
+    {
+      "text": "Can you freeze my account?  I just saw there are transactions on my account that I don't recognize.  How can I fix this?",
+      "true": "card_payment_not_recognised",
+      "predicted": "compromised_card",
+      "confidence": 0.9313
+    },
+    {
+      "text": "I want to reverse a purchase. Can I cancel it?",
+      "true": "request_refund",
+      "predicted": "cancel_transfer",
+      "confidence": 0.9255
+    },
+    {
+      "text": "Is GBP a supported currency?",
+      "true": "receiving_money",
+      "predicted": "exchange_via_app",
+      "confidence": 0.9226
+    },
+    {
+      "text": "can I have a non virtual card?",
+      "true": "order_physical_card",
+      "predicted": "getting_virtual_card",
+      "confidence": 0.9201
+    },
+    {
+      "text": "A wrong exchange rate was applied to a transaction made abroad.",
+      "true": "wrong_exchange_rate_for_cash_withdrawal",
+      "predicted": "card_payment_wrong_exchange_rate",
+      "confidence": 0.914
+    },
+    {
+      "text": "im not sure what this charge is for",
+      "true": "card_payment_fee_charged",
+      "predicted": "direct_debit_payment_not_recognised",
+      "confidence": 0.9131
+    },
+    {
+      "text": "How long until my transfer goes through?",
+      "true": "transfer_timing",
+      "predicted": "pending_transfer",
+      "confidence": 0.9115
+    },
+    {
+      "text": "Can I transfer money to a beneficiery?",
+      "true": "beneficiary_not_allowed",
+      "predicted": "transfer_into_account",
+      "confidence": 0.9114
+    },
+    {
+      "text": "why isnt my account allowing transfers",
+      "true": "beneficiary_not_allowed",
+      "predicted": "balance_not_updated_after_bank_transfer",
+      "confidence": 0.9023
+    },
+    {
+      "text": "My non-physical card will not work",
+      "true": "virtual_card_not_working",
+      "predicted": "card_not_working",
+      "confidence": 0.9021
+    },
+    {
+      "text": "I made a transaction and it is taking a very long time to go through.",
+      "true": "transfer_not_received_by_recipient",
+      "predicted": "pending_transfer",
+      "confidence": 0.9
+    },
+    {
+      "text": "I can't verify my identity.",
+      "true": "unable_to_verify_identity",
+      "predicted": "verify_my_identity",
+      "confidence": 0.8964
+    },
+    {
+      "text": "how long do money transfers take?",
+      "true": "transfer_not_received_by_recipient",
+      "predicted": "balance_not_updated_after_bank_transfer",
+      "confidence": 0.895
+    },
+    {
+      "text": "Should i reinstall the payment app?",
+      "true": "contactless_not_working",
+      "predicted": "reverted_card_payment?",
+      "confidence": 0.8948
+    },
+    {
+      "text": "There appears to have been a reversion in my top up",
+      "true": "top_up_reverted",
+      "predicted": "pending_top_up",
+      "confidence": 0.8844
+    },
+    {
+      "text": "How do I deposit my paycheck to this account?",
+      "true": "receiving_money",
+      "predicted": "transfer_into_account",
+      "confidence": 0.8844
+    },
+    {
+      "text": "Why is a money transfer not showing?",
+      "true": "pending_transfer",
+      "predicted": "balance_not_updated_after_bank_transfer",
+      "confidence": 0.8836
+    },
+    {
+      "text": "WTF??? I tried to withdraw some money at a Metro bank on High St. Kensington and without any notice it disappeared in the machine. The bank was already closed so I couldn't do anything. How do I get it back?",
+      "true": "card_swallowed",
+      "predicted": "declined_cash_withdrawal",
+      "confidence": 0.8791
+    },
+    {
+      "text": "How do I get my PIN unlocked?",
+      "true": "pin_blocked",
+      "predicted": "get_physical_card",
+      "confidence": 0.876
+    },
+    {
+      "text": "What us the fee to transfer money from my bank?",
+      "true": "top_up_by_bank_transfer_charge",
+      "predicted": "transfer_fee_charged",
+      "confidence": 0.8738
+    },
+    {
+      "text": "I've already topped up, but I cannot see the funds being available. What happened?",
+      "true": "pending_top_up",
+      "predicted": "top_up_reverted",
+      "confidence": 0.8694
+    },
+    {
+      "text": "Topping up my card is not working because I believe the top up is pending",
+      "true": "pending_top_up",
+      "predicted": "top_up_failed",
+      "confidence": 0.8686
+    },
+    {
+      "text": "My card's frozen, what can I do?",
+      "true": "pin_blocked",
+      "predicted": "card_not_working",
+      "confidence": 0.8646
+    },
+    {
+      "text": "Is there a fee for exchanging cash?",
+      "true": "wrong_exchange_rate_for_cash_withdrawal",
+      "predicted": "exchange_charge",
+      "confidence": 0.863
+    },
+    {
+      "text": "what is this charge on my account",
+      "true": "direct_debit_payment_not_recognised",
+      "predicted": "extra_charge_on_statement",
+      "confidence": 0.8549
+    },
+    {
+      "text": "Double check your funds may be declined",
+      "true": "declined_transfer",
+      "predicted": "declined_cash_withdrawal",
+      "confidence": 0.8537
+    },
+    {
+      "text": "How long until my transfer will be available to me",
+      "true": "balance_not_updated_after_bank_transfer",
+      "predicted": "pending_transfer",
+      "confidence": 0.8516
+    },
+    {
+      "text": "What is needed to prove my identity?",
+      "true": "verify_my_identity",
+      "predicted": "unable_to_verify_identity",
+      "confidence": 0.8511
+    },
+    {
+      "text": "My contanctless has stopped working",
+      "true": "contactless_not_working",
+      "predicted": "card_not_working",
+      "confidence": 0.8511
+    },
+    {
+      "text": "Can you explain the virtual cards limit?",
+      "true": "disposable_card_limits",
+      "predicted": "getting_virtual_card",
+      "confidence": 0.8486
+    },
+    {
+      "text": "When does the money get transferred to my account",
+      "true": "transfer_timing",
+      "predicted": "balance_not_updated_after_bank_transfer",
+      "confidence": 0.8465
+    },
+    {
+      "text": "I don't want the transaction to go through now",
+      "true": "cancel_transfer",
+      "predicted": "transfer_not_received_by_recipient",
+      "confidence": 0.8435
+    }
+  ]
+}
